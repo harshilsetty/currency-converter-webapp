@@ -26,6 +26,7 @@ A modern, aesthetic and responsive currency converter using **live exchange rate
 ## 🌐 Live Preview
 
 Hosted on GitHub Pages:  
-👉 [Live Demo](#) (See next step to publish)
+
+👉 [Click here to try the app](https://yourusername.github.io/currency-converter-webapp/)
 
 
