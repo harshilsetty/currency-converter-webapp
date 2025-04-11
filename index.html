@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="converter-card">
+            <div class="card-header">
+                <h1><i class="fas fa-exchange-alt"></i> Currency Converter</h1>
+                <p class="subtitle">Real-time exchange rates</p>
+            </div>
+            
+            <div class="converter-form">
+                <div class="input-group">
+                    <div class="amount-input">
+                        <label for="amount">Amount</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                            <input type="number" id="amount" value="1" min="0.01" step="0.01">
+                        </div>
+                    </div>
+                    
+                    <div class="currency-select">
+                        <div class="from-currency">
+                            <label for="from-currency">From</label>
+                            <div class="select-wrapper">
+                                <select id="from-currency"></select>
+                                <img id="from-flag" class="currency-flag" src="https://flagcdn.com/w40/us.png" alt="USD flag">
+                            </div>
+                        </div>
+                        
+                        <button id="swap-btn" class="swap-btn" title="Swap currencies">
+                            <i class="fas fa-exchange-alt"></i>
+                        </button>
+                        
+                        <div class="to-currency">
+                            <label for="to-currency">To</label>
+                            <div class="select-wrapper">
+                                <select id="to-currency"></select>
+                                <img id="to-flag" class="currency-flag" src="https://flagcdn.com/w40/in.png" alt="INR flag">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="result-container">
+                    <div class="loading-spinner" id="loading-spinner">
+                        <div class="spinner"></div>
+                    </div>
+                    <div class="converted-amount" id="converted-amount">
+                        1 USD = 0.85 EUR
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="convert-btn" class="primary-btn">
+                        <i class="fas fa-sync-alt"></i> Convert
+                    </button>
+                    <button id="reset-btn" class="secondary-btn">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                </div>
+            </div>
+            
+            <div class="card-footer">
+                <div class="last-updated">
+                    <span>Last updated: </span>
+                    <span id="last-updated">Loading...</span>
+                </div>
+                <div class="api-attribution">
+                    <span>Data provided by <a href="https://www.exchangerate-api.com/" target="_blank">ExchangeRate-API</a></span>
+                </div>
+                <div class="developer-credit">
+                    <span>Made by <a href="https://www.linkedin.com/in/harshil-somisetty/" target="_blank">HARSHIL SOMISETTY</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
